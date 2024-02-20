@@ -10,17 +10,13 @@ programa {
     leia(c)
    
     se(a+b>c){  
-      escreva("é menor que c")
-    }senao{
       escreva("é maior que c")
+    }senao{
+      escreva("é menor que c")
 
 
 
     }
-
-
-
-
     }
     
   }
