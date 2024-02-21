@@ -1,0 +1,35 @@
+programa {
+    
+    funcao inicio() {
+        // Declaração das variáveis
+        cadeia cor
+        real preco
+        
+        // Tabela de preços associada às cores dos CDs
+        cadeia[] cores = {"verde", "azul", "amarelo", "vermelho"}
+        real[] precos = {10.00, 20.00, 30.00, 40.00}
+        
+        // Solicita ao usuário que insira a cor do CD
+        escreva("Digite a cor do CD (verde, azul, amarelo ou vermelho): ")
+        leia(cor)
+        
+        // Verifica se a cor fornecida pelo usuário está na tabela de cores
+        logico cor_encontrada = falso
+        inteiro indice_cor
+        
+        para (inteiro i = 0; i < cores.tamanho(); i++) {
+            se (cor == cores[i]) {
+                cor_encontrada = verdadeiro
+                indice_cor = i
+            }
+        }
+        
+        // Se a cor for encontrada, exibe o preço correspondente
+        se (cor_encontrada) {
+            preco = precos[indice_cor]
+            escreva("O preço do CD de cor ", cor, " é R$", preco)
+        } senao {
+            escreva("Cor não encontrada. Por favor, insira uma cor válida.")
+        }
+    }
+}
