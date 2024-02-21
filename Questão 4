@@ -1,0 +1,48 @@
+programa
+{
+    funcao inicio()
+    {
+        // Definindo os preços por quilo
+        real preco_morango_ate_5kg = 2.50
+        real preco_morango_acima_5kg = 2.20
+        real preco_maca_ate_5kg = 1.80
+        real preco_maca_acima_5kg = 1.50
+        
+        // Variáveis para armazenar a quantidade de morangos e maçãs
+        real kg_morangos, kg_macas
+        
+        // Solicita ao usuário a quantidade de morangos e maçãs
+        escreva("Digite a quantidade de morangos (em Kg): ")
+        leia(kg_morangos)
+        
+        escreva("Digite a quantidade de maçãs (em Kg): ")
+        leia(kg_macas)
+        
+        // Calcula o preço total dos morangos
+        real preco_total_morangos
+        se (kg_morangos <= 5) {
+            preco_total_morangos = kg_morangos * preco_morango_ate_5kg
+        } senao {
+            preco_total_morangos = kg_morangos * preco_morango_acima_5kg
+        }
+        
+        // Calcula o preço total das maçãs
+        real preco_total_macas
+        se (kg_macas <= 5) {
+            preco_total_macas = kg_macas * preco_maca_ate_5kg
+        } senao {
+            preco_total_macas = kg_macas * preco_maca_acima_5kg
+        }
+        
+        // Calcula o preço total da compra
+        real preco_total = preco_total_morangos + preco_total_macas
+        
+        // Aplica desconto, se aplicável
+        se (kg_morangos + kg_macas > 8 ou preco_total > 25.00) {
+            preco_total = preco_total * 0.9  // Aplicando desconto de 10%
+        }
+        
+        // Exibe o valor a ser pago pelo cliente
+        escreva("O valor total a ser pago pelo cliente é: R$", preco_total)
+    }
+}
