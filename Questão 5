@@ -1,0 +1,44 @@
+programa {
+  funcao inicio() {
+    cadeia operacao
+    inteiro a, b, resultado
+
+   escreva("\nDigite o primeiro número: ")
+   leia(a)
+  
+   escreva("\nDigite o primeiro número: ")
+   leia(b)
+   
+   escreva("\nDigite a operação: ")
+   leia(operacao)
+  
+  escolha(operacao){ 
+   caso "+" :
+   resultado = a + b
+   pare
+   
+   caso "-" :
+   resultado = + a - b
+   pare
+   
+   caso "/" :
+   resultado = a / b
+   pare
+   
+   caso "*" :
+   resultado = a * b
+   pare
+    
+    caso contrario :
+    escreva("Operação invalida. ")
+
+  }
+    
+    
+    escreva("\no resultado é: ", resultado)
+ 
+
+  }
+
+
+}
