@@ -1,0 +1,25 @@
+programa {
+    funcao inicio() {
+        // Leitura das notas do aluno
+        real nota1, nota2
+        escreva("Digite a primeira nota: ")
+        leia(nota1)
+        escreva("Digite a segunda nota: ")
+        leia(nota2)
+        
+        // Cálculo da média aritmética das notas
+        real media = (nota1 + nota2) / 2
+        
+        // Exibição da média
+        escreva("A média do aluno é: ", media)
+        
+        // Verificação de aprovação, recuperação ou reprovação
+        se (media >= 6.0) {
+            escreva("\nParabéns! Você está aprovado!")
+        } senao se (media >= 4.0) {
+            escreva("\nVocê está em recuperação.")
+        } senao {
+            escreva("\nVocê está reprovado.")
+        }
+    }
+}
