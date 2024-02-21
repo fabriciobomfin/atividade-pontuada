@@ -1,0 +1,79 @@
+programa {
+    
+    funcao inicio() {
+        // Declaração das variáveis
+        cadeia descricao
+        inteiro quantidade
+        real preco_unitario, total, desconto, total_a_pagar
+        
+        // Entrada de dados
+        escreva("Digite a descrição do produto: ")
+        leia(descricao)
+        
+        escreva("Digite a quantidade adquirida: ")
+        leia(quantidade)
+        
+        escreva("Digite o preço unitário: ")
+        leia(preco_unitario)
+        limpa()programa {
+    
+    funcao inicio() {
+        // Declaração das variáveis
+        cadeia descricao
+        inteiro quantidade
+        real preco_unitario, total, desconto, total_a_pagar
+        
+        // Entrada de dados
+        escreva("Digite a descrição do produto: ")
+        leia(descricao)
+        
+        escreva("Digite a quantidade adquirida: ")
+        leia(quantidade)
+        
+        escreva("Digite o preço unitário: ")
+        leia(preco_unitario)
+        
+        // Cálculo do total
+        total = quantidade * preco_unitario
+        
+        // Cálculo do desconto
+        se (quantidade <= 5) {
+            desconto = total * 0.02
+        } senao se (quantidade <= 10) {
+            desconto = total * 0.03
+        } senao {
+            desconto = total * 0.05
+        }
+        
+        // Cálculo do total a pagar
+        total_a_pagar = total - desconto
+        
+        // Saída de dados
+        escreva("Total: R$", total)
+        escreva("Desconto: R$", desconto)
+        escreva("Total a pagar: R$", total_a_pagar)
+    }
+}
+
+        // Cálculo do total
+        total = quantidade * preco_unitario
+        
+        // Cálculo do desconto
+        se (quantidade <= 5) {
+            desconto = total * 0.02
+        } senao se (quantidade <= 10) {
+            desconto = total * 0.03
+        } senao {
+            desconto = total * 0.05
+        }
+        
+        // Cálculo do total a pagar
+        total_a_pagar = total - desconto
+        
+        // Saída de dados
+        escreva("nome do produto: ", descricao)
+        escreva("\nTotal: R$", total)
+        escreva("\nDesconto: R$", desconto)
+        escreva("\nTotal a pagar: R$", total_a_pagar)
+    }
+}
